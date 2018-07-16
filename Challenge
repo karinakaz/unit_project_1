@@ -1,0 +1,56 @@
+#Challange 1:
+
+n = 0
+for a in range(999, 100, -1):
+    for b in range(a, 100, -1):
+        x = a * b
+        if x > n:
+            s = str(a * b)
+            if s == s[::-1]:
+                n = a * b
+print(n)
+
+#Challenge 2: Summation of Primes
+
+def isPrime(n):
+    for i in range(2, int(n**0.5) + 1):
+        if n % i == 0:
+            return False
+    return True
+
+sum = 0
+for i in range(2, 2000000):
+    if isPrime(i):
+        sum += i
+
+print (sum)
+
+#Challenge 3: Multiples of 3 and 5
+x = range (1, 1000)
+y = []
+
+for i in x:
+    if i % 3 == 0:
+      y.append(i)
+    if i % 5 == 0:
+      y.append(i)
+    
+for j in y:
+    sum += j
+    
+print(sum)   
+    
+    
+#FizzBuzz
+x = range(1,100)
+for n in x:
+  if n % 3 == 0 and n % 5 ==0:
+        print("FizzBuzz")
+  elif n % 3 == 0:
+     print('Fizz')    
+        
+  elif n % 5 == 0:
+     print("Buzz")
+  else:
+    print(n)
+        
